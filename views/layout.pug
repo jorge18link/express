@@ -1,7 +1,52 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Dashboard
+    // Insertamos el archivo CSS agregado mediante bower
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
+    // Theme opcional
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap-theme.min.css')
+    style(type='text/css').
+      .container{
+      max-width: 75%;
+      }
+      .col-md-3{
+      border: solid 1px;
+      margin-left: 35px;
+      padding: 20px;
+      }
+      .con{
+      border:solid 1px;
+      padding: 15px;
+      }
+      .sub{
+      text-decoration: underline;
+      }
   body
-    block content
+    main.container
+      div
+        h2 Dashboard de Proyectos
+      div
+        | Proyecto:  
+        select#Proyecto(name='Proyecto')
+      br
+      div
+        button.btn.btn-primary.btn-md(type='button') Agregar tarea
+      br
+      .body
+        .col-md-3
+          p.sub Inicial
+          .con
+            p tarea 1
+            p tarea 2
+            p tarea 3
+        .col-md-3
+          p.sub En desarrollo
+          .con
+            p tarea 1
+            p tarea 2
+        .col-md-3
+          p.sub Finalizadas
+          .con
+            p tarea 1
+            p tarea 2
