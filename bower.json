@@ -1,0 +1,24 @@
+{
+  "name": "practica-express",
+  "description": "Practica con express, mvc, template engines, bower y otras cosas",
+  "main": "app.js",
+  "authors": [
+    "Jorge",
+    "Karen",
+    "Israel",
+    "Fernando"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
