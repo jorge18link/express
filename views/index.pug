@@ -9,7 +9,9 @@ block content
         select#Proyecto(name='Proyecto')
       br
       div
-        button.btn.btn-primary.btn-md(type='button') Agregar tarea
+        button.btn-primary(aria-label='Left Align', data-toggle='modal', data-target='#ModalCrear')
+          span.glyphicon.glyphicon-plus
+          |  Agregar Tarea
       br
       .body
         .col-md-3
@@ -28,3 +30,27 @@ block content
           .con
             p tarea 1
             p tarea 2
+      #ModalCrear.modal.fade(role='dialog')
+        .modal-dialog
+          // Modal content
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal') ×
+              h4.modal-title Crear Nueva tarea
+            .modal-body
+              form
+                .form-group
+                  label Titulo
+                  input#exampleInputEmail1.form-control(type='email', placeholder='Enter tittle')
+                .form-group
+                  label(for='exampleTextarea')
+                    | Descripcion
+                  textarea#exampleTextarea.form-control(rows='3')
+                .form-group.has-feedback
+                  label Responsable
+                  input.form-control
+                  i.glyphicon.glyphicon-search.form-control-feedback
+                p Estado: Inicial
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Close
+              button.btn.btn-primary(type='submit') Submit
