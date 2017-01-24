@@ -16,20 +16,16 @@ block content
       .body
         .col-md-3
           p.sub Inicial
-          .con
-            p tarea 1
-            p tarea 2
-            p tarea 3
+          #inical.con(ondrop='drop(event)', ondragover='allowDrop(event)')
+            #tarea1(draggable='true', ondragstart='drag(event)') tarea 1
         .col-md-3
           p.sub En desarrollo
-          .con
-            p tarea 1
-            p tarea 2
+          #desarrollo.con(ondrop='drop(event)', ondragover='allowDrop(event)')
+            #tarea2(draggable='true', ondragstart='drag(event)') tarea 2
         .col-md-3
           p.sub Finalizadas
-          .con
-            p tarea 1
-            p tarea 2
+          #finalizado.con(ondrop='drop(event)', ondragover='allowDrop(event)')
+            #tarea3(draggable='true', ondragstart='drag(event)') tarea 3
       #ModalCrear.modal.fade(role='dialog')
         .modal-dialog
           // Modal content
