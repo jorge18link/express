@@ -4,10 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+ 
+mongoose.connect('mongodb://user:1234@ds129179.mlab.com:29179/expressdaw');
+mongoose.connection.on('open', function (err) {
+  if (err) return console.log('No se ha podido conectar con la base de datos')
+  // Iniciamos nuestro servidor Express o ejecutamos nuestra función que crea documentos, por ejemplo..
+})
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var collection_proyectos= require('./routes/proyecto')
 var app = express();
 
 // view engine setup
@@ -26,6 +34,7 @@ app.use('/public',  express.static( path.join(__dirname, '/public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/proyecto',collection_proyectos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
