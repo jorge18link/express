@@ -1,4 +1,6 @@
-var Schema = require('mongoose').Schema
+require('../models/Usuario')
+var mongoose= require('mongoose');
+var Schema = mongoose.Schema;
 var usuario  = mongoose.model('usuario')
 var tareaSchema = new Schema({
   titulo:String,
