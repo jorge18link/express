@@ -7,6 +7,8 @@ block content
       div
         | Proyecto:  
         select#Proyecto(name='Proyecto')
+          each proyecto, i in proyectolist
+            option #{proyecto.titulo}
       br
       div
         button.btn-primary(aria-label='Left Align', data-toggle='modal', data-target='#ModalCrear')

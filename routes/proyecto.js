@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
     var collection = mongoose.model('proyecto');
     collection.find({}, function(err, proyecto){
         if (err) throw err;
+        req.render(index,{proyectolist: proyecto});
     });
 });
 
