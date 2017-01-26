@@ -16,3 +16,19 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
+
+
+
+/*
+
+-----guiate con eso para recorrer lo que hace es mandarle un proyectlist(es el json)
+a la vista .. 
+div
+        each proyecto, i in proyectolist
+          each tarea, i in proyectolist[i].tarea
+             p #{tarea.titulo}
+
+
+http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+https://www.airpair.com/javascript/complete-expressjs-nodejs-mongodb-crud-skeleton
+*/

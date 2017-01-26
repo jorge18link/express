@@ -2,6 +2,8 @@ extends layout
 
 block content
   main.container
+      
+      .body
       div
         h2 Dashboard de Proyectos
       div
@@ -15,16 +17,16 @@ block content
           span.glyphicon.glyphicon-plus
           |  Agregar Tarea
       br
-      .body
-        .col-md-3
+      
+      .col-md-3
           p.sub Inicial
           #inical.con(ondrop='drop(event)', ondragover='allowDrop(event)')
             #tarea1(draggable='true', ondragstart='drag(event)') tarea 1
-        .col-md-3
+      .col-md-3
           p.sub En desarrollo
           #desarrollo.con(ondrop='drop(event)', ondragover='allowDrop(event)')
             #tarea2(draggable='true', ondragstart='drag(event)') tarea 2
-        .col-md-3
+      .col-md-3
           p.sub Finalizadas
           #finalizado.con(ondrop='drop(event)', ondragover='allowDrop(event)')
             #tarea3(draggable='true', ondragstart='drag(event)') tarea 3

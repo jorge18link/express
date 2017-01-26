@@ -5,7 +5,7 @@ var tarea= mongoose.model('tarea');
 var projectoSchema = new Schema({
   titulo:String,
   descripcion:String,
-  tareas:{type:Schema.ObjectId, ref: "tarea"}
+  tarea:{type:Schema.ObjectId, ref: "tarea"}
 })
  
 
