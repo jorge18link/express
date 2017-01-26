@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
  
-mongoose.connect('mongodb://user:1234@ds129179.mlab.com:29179/expressdaw');
+mongoose.connect('mongodb://user:1234@ds131139.mlab.com:31139/projects');
 mongoose.connection.on('open', function (err) {
   if (err) return console.log('No se ha podido conectar con la base de datos')
   // Iniciamos nuestro servidor Express o ejecutamos nuestra función que crea documentos, por ejemplo..

@@ -1,0 +1,15 @@
+1:Instalar mongoDB version 3.2.11
+
+2:copiar lo siguiente, asi pueden acceder a la base de datos desde la consola para hacer pruebas
+
+mongo ds131139.mlab.com:31139/projects -u user -p 1234
+
+Nota: una vez en el shell pueden escribir "help" (sin comillas) para ver la lista de comandos que pueden usar
+
+db.nombre_de_la_coleccion.find() muestra todos los documentos (registros) de la coleccion seleccionada
+
+Aparte: 
+
+El siguiente link se pondra en el proyecto a traves de mongoose connect o createconnection:
+
+mongodb://user:1234@ds131139.mlab.com:31139/projects

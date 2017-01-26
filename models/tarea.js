@@ -4,7 +4,7 @@ var tareaSchema = new Schema({
   titulo:String,
   descripcion:String,
   estado:String,
-  usuario: {type: Schema.ObjectId, ref: "usuario"}
+  usuarios: {type: Schema.ObjectId, ref: "usuario"}
 })
  
 module.exports = mongoose.model('tarea', tareaSchema);
