@@ -48,9 +48,15 @@ block content
                   textarea#exampleTextarea.form-control(rows='3')
                 .form-group.has-feedback
                   label Responsable
-                  input.form-control
+                  //input.form-control
+                  div(ng-controller='MyCtrl')
+                    autocomplete(ng-model="result" attr-placeholder="search" click-activation="true" data="movies" on-type="doSomething" on-select="doSomethingElse") 
                   i.glyphicon.glyphicon-search.form-control-feedback
                 p Estado: Inicial
             .modal-footer
               button.btn.btn-default(type='button', data-dismiss='modal') Close
               button.btn.btn-primary(type='submit') Submit
+  script(src='/bower_components/angular/angular.min.js')
+  script(src='/bower_components/Autocomplete/dist/autocomplete.js')
+  script(src='/public/javascript/app.js')
+  script(src='/public/javascript/autocomplete.js')
