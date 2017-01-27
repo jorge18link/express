@@ -1,9 +1,15 @@
+//require('../models/usuario')
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+/*router.get('/', function(req, res) {
+    var collection = mongoose.model('usuario');
+    collection.find({}, function(err, usuario){
+        if (err) throw err;
+        req.render(index,{usuariolist: usuario});
+    });
+});*/
 
 module.exports = router;

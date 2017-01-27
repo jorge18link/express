@@ -2,13 +2,11 @@ require('../models/proyecto')
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-//var proyecto= mongoose.model('proyecto');
-
 
 
 router.get('/', function(req, res) {
-    var collection = mongoose.model('proyecto');
-    collection.find({}, function(err, proyecto){
+    var us = mongoose.model('proyecto');
+    us.find({}, function(err, proyecto){
         if (err) throw err;
         req.render(index,{proyectolist: proyecto});
     });
