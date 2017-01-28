@@ -28,7 +28,7 @@ app.factory('MovieRetriever', function($http, $q, $timeout){
 });
 
 app.controller('MyCtrl', function($scope, MovieRetriever){
-
+  $scope.data = {}
   $scope.movies = MovieRetriever.getmovies("...");
   $scope.movies.then(function(data){
     $scope.movies = data;
@@ -50,4 +50,11 @@ app.controller('MyCtrl', function($scope, MovieRetriever){
     console.log("Suggestion selected: " + suggestion );
   }
 
+  $scope.guardarTarea = function () {
+    var data = $("#formulario");
+    console.log(data);
+  }
+
 });
+
+
